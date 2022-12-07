@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "fastapi_dataclass_battery.__version__"}
+dependencies = {file = ["requirements.txt"]}
+
+[project]
+name = "fastapi_dataclass_battery"
+dynamic = ["version", "dependencies"]
+description = "Simple library that adds the ability to use slots with pydantic dataclasses and allows to bypass the response validation."
+authors = [
+  { name="Egor Stakhovsky", email="y.stakhovsky@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/stakhovsky/fastapi-dataclass-battery"
+"Bug Tracker" = "https://github.com/stakhovsky/fastapi-dataclass-battery/issues"
